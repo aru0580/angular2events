@@ -1,0 +1,27 @@
+<!--The whole content below can be removed with the new code.-->
+<body>
+<div style="text-align:center">
+  <h1 >
+   {{title}}!!
+  </h1>
+ 
+ <input type="text" #stu (focus)="focus()" (blur)="blur()" (keyup.enter)="addStudent(stu.value)">
+    <button (click)="addStudent(stu.value)"   class="btn btn-info" role="button" title="click to add" >Add</button>
+    <p>{{msg1}}</p>
+ <br>
+ <button (click)="clicked()" (mouseover)="over()" (mouseleave)="leave()" class="btn btn-info" role="button" >Display</button>
+  <p>{{msg}}</p>
+ <div *ngIf="status">
+<div class="container">
+    <table class="table">
+         <tbody>
+        <tr class="info" *ngFor="let stu of students">
+        <td>{{stu}}</td>
+      </tr>
+      </tbody>
+      </table>
+</div>
+   </div>
+ 
+ </div>
+ </body>
